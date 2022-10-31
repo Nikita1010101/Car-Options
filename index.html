@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="source/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="car">
+        <div class="car__container">
+            <h1>Automobiles</h1><hr>
+            <div class="car__main">
+                <div class="car-list">
+                    <select>
+                        <option>Default</option>
+                        <option>Model</option>
+                        <option>Color</option>
+                        <option>Power</option>
+                        <option>Price</option>
+                    </select>
+                    <input type="text" placeholder="Search">
+                    <div class="car-list__list">
+                        
+                    </div>
+                </div>
+                <div class="car-item">
+                    <h2>BMW M5</h2>
+                    <div class="car-item__slider">
+                        <div class="car-item__prev">
+                            <img src="img/btn-prev.svg" alt="left">
+                        </div>
+                        <div class="car-item__photo">
+                            <img src="img/bmw-1.jpg" alt="photo not found">
+                        </div>
+                        <div class="car-item__next">
+                            <img src="img/btn-next.svg" alt="right">
+                        </div>
+                    </div>
+                    <div class="car-item__dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <table class="car-item__characteristics">
+                        <tr>
+                            <td>Color</td>
+                            <td class="car-item__color"></td>
+                        </tr>
+                        <tr>
+                            <td>Power hp.</td>
+                            <td class="car-item__power"></td>
+                        </tr>
+                        <tr>
+                            <td>Price mill.</td>
+                            <td class="car-item__price"></td>
+                        </tr>
+                        <tr>
+                            <td>Engine volume<span>, l</span></td>
+                            <td class="car-item__engineVolume"></td>
+                        </tr>
+                        <tr>
+                            <td>Weight<span>, kg.</span></td>
+                            <td class="car-item__weight"></td>
+                        </tr>
+                        <tr>
+                            <td>Length<span>, mm.</span></td>
+                            <td class="car-item__length"></td>
+                        </tr>
+                        <tr>
+                            <td>Width<span>, mm.</span></td>
+                            <td class="car-item__width"></td>
+                        </tr>
+                        <tr>
+                            <td>Height<span>, mm.</span></td>
+                            <td class="car-item__height"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@mixin mpwh($mt, $mr, $mb, $ml, $pt, $pr, $pb, $pl, $w, $h) {
+    margin: $mt $mr $mb $ml;
+    padding: $pt $pr $pb $pl;
+    width: $w;
+    height: $h;
+}
+%df {
+    display: flex;
+    justify-content: space-between;
+}
+%br5p {
+    border-radius: 10px;
+}
+%cp {
+    cursor: pointer;
+}
+* {
+    box-sizing: border-box;
+}
+.car {
+    &__container {
+        @include mpwh(30px, auto, 0, auto, 5px, 15px, 20px, 15px, 1200px, none);
+        @extend %br5p;
+        background-color: #3d29b0;
+        & h1 {
+            font-size: 48px;
+            text-align: center;
+            color:white
+        }
+        & hr {
+            width: 1000px;
+            background: black;
+            border: 1px solid black;
+            text-align: center;
+        }
+    }
+    &__main {
+        @extend %df;
+        margin-top: 70px;
+    }
+    &-list {
+        @include mpwh(0, 0, 0, 0, 15px, 10px, 15px, 10px, 520px, 650px);
+        overflow: auto;
+        background-color: #171717;
+        @extend %br5p;
+        & select {
+            font-size: 14px;
+            font-weight: 600;
+            @include mpwh(0, 0, 0, 0, 0, 0, 0, 40px, 140px, 35px);
+            @extend %cp;
+            border: none;
+            border-radius: 15px;
+        }
+        & input {
+            @include mpwh(0, 0, 0, 15px, 0, 0, 0, 25px, 320px, 35px);
+            @extend %cp;
+            border: none;
+            border-radius: 15px;
+        }
+        &__item  {
+            @include mpwh(20px, auto, 20px, auto, 15px, 0, 15px, 0, 400px, 100px);
+            @extend %cp;
+            text-align: center;
+            background: #0008C8;
+            @extend %br5p;
+            
+        }
+        & h2 {
+            margin: 0 0 13px 0;
+            color: white;
+        }
+        & div {
+            color: white;
+        }
+    }
+    &-item {
+        width: 640px;
+        height: 650px;
+        text-align: center;
+        background: #110016;
+        @extend %br5p;
+        overflow: auto;
+        & h2 {
+            color: white;
+            font-size: 32px;
+        }
+        &__slider {
+            @include mpwh(0, auto, 0, auto, 0, 0, 0, 0, 512px, none);
+            @extend %df;
+            align-items: center;
+        }
+        &__photo img {
+            width: 432px;
+            @extend %br5p;
+        }
+        &__prev {
+            margin-right: 20px;
+            @extend %cp;
+        }
+        &__next {
+            margin-left: 20px;
+            @extend %cp;
+        }
+        &__dots {
+            @extend %df;
+            justify-content: center;
+            & .dot {
+                @include mpwh(10px, 15px, 10px, 15px, 0, 0, 0, 0, 15px, 15px);
+                @extend %cp;
+                background: #777;
+                border-radius: 50%;
+            }
+            & .active {
+                background: transparent;
+                border: 2px solid #777;
+            }
+        }
+        &__characteristics {
+            margin: 80px auto 20px auto;
+            & tr td {
+                width: 260px;
+                height: 50px;
+                color: white;
+                border: 1px solid #777;
+            }
+        }
+    }
+}
